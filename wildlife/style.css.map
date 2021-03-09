@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "style.scss",
+        "assets/sass/_const.scss",
+        "assets/sass/_mixin.scss",
+        "assets/sass/_hero.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
