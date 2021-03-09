@@ -30,3 +30,79 @@
 
   color: $font-dark;
 }
+
+@mixin sh-2-grey {
+  @include open-sans();
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-align: center;
+
+  color: $font-grey;
+}
+
+@mixin h-3-dark {
+  @include open-sans();
+
+  font-size: 2.7rem;
+  line-height: 4rem;
+  text-align: center;
+
+  color: $font-dark;
+}
+
+@mixin h-4-light {
+  @include open-sans();
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  text-align: center;
+
+  color: $font-light;
+}
+
+@mixin wildlife {
+  @include roboto();
+  font-size: 3.2rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  color: $font-light;
+}
+
+@mixin menu-UI {
+  @include open-sans();
+  font-size: 2.3rem;
+  line-height: 6rem;
+  color: $font-light;
+}
+
+@mixin regular-UI {
+  @include roboto();
+  font-size: 2.3rem;
+  line-height: 2.7rem;
+  text-align: center;
+
+  color: $font-light;
+}
+
+@mixin regular-light {
+  @include open-sans();
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  color: $font-light;
+}
+
+@mixin small-light {
+  @include open-sans();
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+
+  color: $font-light;
+}
+
+%padding-vertical {
+  padding: 12rem 0;
+}
+
+%padding-horizontal {
+  padding: 0 6rem;
+}

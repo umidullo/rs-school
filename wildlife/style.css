@@ -1,4 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 :root {
   font-size: 10px;
+}
+
+body {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
