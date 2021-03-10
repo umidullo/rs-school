@@ -1,0 +1,96 @@
+.hero {
+  background: url(Rectangle.png);
+  height: 77.9rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  margin-top: 2rem;
+
+  h1 {
+    @include wildlife();
+    margin-left: 1.6rem;
+  }
+}
+
+nav {
+  width: 100%;
+  max-width: 48rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+li {
+  list-style: none;
+
+  a {
+    @include menu-UI();
+    text-decoration: none;
+  }
+}
+
+.signBtn {
+  padding: 1rem 2.3rem 0.9rem 2.4rem;
+  border: 2px solid $orange-main;
+  border-radius: 5px;
+
+  @include regular-UI();
+
+  &:hover {
+    background-color: $orange-main;
+    transition: 0.4s;
+  }
+
+  &:active {
+    background-color: $orange-dark;
+    border: 2px solid $orange-dark;
+  }
+}
+
+.hero__content {
+  @extend %padding-vertical;
+
+  .h1 {
+    @include h1-orange();
+  }
+
+  .regular {
+    @include regular-light();
+
+    margin-top: 5rem;
+    margin-bottom: 6.6rem;
+
+    width: 100%;
+    max-width: 274px;
+  }
+
+  .orange-main {
+    text-decoration: none;
+    @include regular-UI();
+    text-align: center;
+    padding: 1.6rem 4.4rem;
+
+    background-color: $orange-main;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $orange-light;
+      transition: 0.4s;
+    }
+
+    &:active {
+      background-color: $orange-dark;
+    }
+  }
+}
