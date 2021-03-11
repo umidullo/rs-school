@@ -21,8 +21,8 @@ body {
   margin: 0 auto;
 }
 
-.hero__content {
-  padding: 12rem 0 24rem 0;
+.hero__content, .main__heading {
+  padding: 12rem 0 12rem 0;
 }
 
 .hero {
@@ -162,5 +162,112 @@ li a {
 
 .hero__content .orange-main:active {
   background-color: #8f5613;
+}
+
+main {
+  background-color: #ccc;
+}
+
+.main__heading {
+  padding-bottom: 12rem;
+}
+
+.h2-dark {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.8rem;
+  line-height: 7.2rem;
+  text-align: center;
+  color: #333333;
+  padding-bottom: 2rem;
+}
+
+.sh-2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: #666666;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.deer {
+  background-image: url("./assets/Deer.jpg");
+}
+
+.squirrel {
+  background-image: url("./assets/Squirrel.jpg");
+}
+
+.bird {
+  background-image: url("./assets/Bird.jpg");
+}
+
+.slider__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 102rem;
+  padding-bottom: 12rem;
+}
+
+.slider__img {
+  width: 30rem;
+  height: 36rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.arrow_right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.h-4-light {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: #f7f7f7;
+  margin-top: 24.7rem;
+  margin-bottom: 1rem;
+}
+
+.small {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+  color: #f7f7f7;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,67 @@
+main {
+  background-color: #ccc;
+}
+
+.main__heading {
+  @extend %padding-vertical;
+  padding-bottom: 12rem;
+}
+
+.h2-dark {
+  @include h2-dark();
+  padding-bottom: 2rem;
+}
+
+.sh-2 {
+  @include sh-2-grey();
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deer {
+  background-image: url("./assets/Deer.jpg");
+}
+
+.squirrel {
+  background-image: url("./assets/Squirrel.jpg");
+}
+
+.bird {
+  background-image: url("./assets/Bird.jpg");
+}
+
+.slider__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 102rem;
+  padding-bottom: 12rem;
+}
+
+.slider__img {
+  width: 30rem;
+  height: 36rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow_right {
+  transform: rotate(180deg);
+}
+
+.h-4-light {
+  @include h-4-light();
+  margin-top: 24.7rem;
+  margin-bottom: 1rem;
+}
+
+.small {
+  @include small-light();
+  text-align: center;
+}
