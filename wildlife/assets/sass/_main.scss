@@ -20,6 +20,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 24rem;
 }
 
 .deer {
@@ -40,7 +41,6 @@ main {
   justify-content: space-between;
   width: 100%;
   max-width: 102rem;
-  padding-bottom: 12rem;
 }
 
 .slider__img {
@@ -51,8 +51,12 @@ main {
   flex-direction: column;
 }
 
-.arrow_right {
-  transform: rotate(180deg);
+.arrow {
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.4s;
+  }
 }
 
 .h-4-light {
@@ -64,4 +68,58 @@ main {
 .small {
   @include small-light();
   text-align: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 24rem;
+}
+
+.form__heading {
+  @include h-3-dark;
+  margin-bottom: 5.9rem;
+}
+
+.form__form {
+  display: flex;
+  align-items: center;
+}
+
+.form__email {
+  height: 6.2rem;
+  width: 54rem;
+  background-color: #ccc;
+  @include regular-UI();
+  border: 1px solid #666;
+  border-right: 0px;
+  padding-left: 1.5rem;
+  padding-top: 2px;
+}
+
+.form__submit {
+  height: 6.2rem;
+  width: 12rem;
+  background: $orange-main;
+  border: 1px solid $orange-main;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+
+  @include regular-UI();
+
+  &:hover {
+    background: $orange-light;
+    border: 1px solid $orange-light;
+  }
+
+  &:active {
+    background: $orange-dark;
+    border: 1px solid $orange-dark;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

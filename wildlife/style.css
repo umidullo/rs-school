@@ -101,7 +101,6 @@ li a {
   font-weight: normal;
   font-size: 2.3rem;
   line-height: 2.7rem;
-  text-align: center;
   color: #f7f7f7;
 }
 
@@ -146,7 +145,6 @@ li a {
   font-weight: normal;
   font-size: 2.3rem;
   line-height: 2.7rem;
-  text-align: center;
   color: #f7f7f7;
   text-align: center;
   padding: 1.6rem 4.4rem;
@@ -203,6 +201,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 24rem;
 }
 
 .deer {
@@ -229,7 +228,6 @@ main {
           justify-content: space-between;
   width: 100%;
   max-width: 102rem;
-  padding-bottom: 12rem;
 }
 
 .slider__img {
@@ -244,9 +242,12 @@ main {
           flex-direction: column;
 }
 
-.arrow_right {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.arrow:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .h-4-light {
@@ -269,5 +270,85 @@ main {
   line-height: 2.7rem;
   color: #f7f7f7;
   text-align: center;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 24rem;
+}
+
+.form__heading {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.7rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 5.9rem;
+}
+
+.form__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__email {
+  height: 6.2rem;
+  width: 54rem;
+  background-color: #ccc;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  line-height: 2.7rem;
+  color: #f7f7f7;
+  border: 1px solid #666;
+  border-right: 0px;
+  padding-left: 1.5rem;
+  padding-top: 2px;
+}
+
+.form__submit {
+  height: 6.2rem;
+  width: 12rem;
+  background: #cd6326;
+  border: 1px solid #cd6326;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.3rem;
+  line-height: 2.7rem;
+  color: #f7f7f7;
+}
+
+.form__submit:hover {
+  background: #e39128;
+  border: 1px solid #e39128;
+}
+
+.form__submit:active {
+  background: #8f5613;
+  border: 1px solid #8f5613;
+  outline: none;
+}
+
+.form__submit:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
