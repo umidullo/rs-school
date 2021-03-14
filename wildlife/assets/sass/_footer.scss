@@ -1,0 +1,44 @@
+footer {
+  background-image: url("./assets/footer.jpg");
+}
+
+.wrapper__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13rem;
+  padding-bottom: 14.9rem;
+}
+
+.footer__logo {
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.footer__logo .logo__p {
+  @include wildlife();
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.footer__nav {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.footer__link a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-color: $font-light;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

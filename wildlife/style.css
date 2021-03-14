@@ -351,4 +351,69 @@ main {
 .form__submit:focus {
   outline: none;
 }
+
+footer {
+  background-image: url("./assets/footer.jpg");
+}
+
+.wrapper__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 13rem;
+  padding-bottom: 14.9rem;
+}
+
+.footer__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.footer__logo .logo__p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.2rem;
+  line-height: 6rem;
+  text-transform: uppercase;
+  color: #f7f7f7;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.footer__nav {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.footer__link a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-color: #f7f7f7;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=style.css.map */
