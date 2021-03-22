@@ -1,12 +1,33 @@
 const piano = document.querySelector(".piano");
 const pianoKeys = document.querySelectorAll(".piano-key");
 
+const keysObj = {
+  KeyD: 'c',
+  KeyF: 'd',
+  KeyG: 'e',
+  KeyH: 'f',
+  KeyJ: 'g',
+  KeyK: 'a',
+  KeyL: 'b',
+  KeyR: 'c♯',
+  KeyT: 'd♯',
+  KeyU: 'f♯',
+  KeyI: 'g♯',
+  KeyO: 'a♯',
+}
+
+window.addEventListener('keydown', (event) => {
+  if (!event.repeat) {
+    if (keysObj[event.code] == undefined) return;
+    playAudio(`assets/audio/` + `${keysObj[event.code]}` + `.mp3`);
+  }
+});
+
 const playAudio = (src) => {
   const audio = new Audio();
   audio.src = src;
   audio.currentTime = 0;
   audio.play();
-
 }
 
 const startSound = (event) => {
@@ -28,7 +49,6 @@ const startCorrespondOver = (event) => {
     elem.addEventListener('mouseover', startSound)
     elem.addEventListener('mouseout', stopSound)
   });
-
 }
 
 const stopCorrespondOver = (elem) => {
@@ -45,3 +65,15 @@ pianoKeys.forEach((elem) => {
 
 piano.addEventListener('mousedown', startCorrespondOver);
 piano.addEventListener('mouseup', stopCorrespondOver);
+
+
+// const pianoLetter = document.querySelectorAll('[data-letter]')
+
+// const btnContainer = document.querySelector('.btn-container');
+// const btn = document.querySelectorAll('.btn');
+
+// btnContainer.addEventListener('click', (elem) => {
+//   if (!elem.target.classList.contains('btn-active')) {
+//     elem.target.classList.add('btn-active')
+//   }
+// })
