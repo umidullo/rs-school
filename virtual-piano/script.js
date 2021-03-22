@@ -81,13 +81,44 @@ piano.addEventListener('mousedown', startCorrespondOver);
 piano.addEventListener('mouseup', stopCorrespondOver);
 
 
-// const pianoLetter = document.querySelectorAll('[data-letter]')
+const changeLetter = () => {
 
-// const btnContainer = document.querySelector('.btn-container');
-// const btn = document.querySelectorAll('.btn');
+  pianoKeys.forEach((elem) => {
+    elem.classList.add('piano-key-letter')
+  })
+}
 
-// btnContainer.addEventListener('click', (elem) => {
-//   if (!elem.target.classList.contains('btn-active')) {
-//     elem.target.classList.add('btn-active')
-//   }
-// })
+const changeNote = () => {
+  pianoKeys.forEach((elem) => {
+    elem.classList.remove('piano-key-letter')
+  })
+}
+
+const btnContainer = document.querySelector('.btn-container');
+const btn = document.querySelectorAll('.btn');
+
+btnContainer.addEventListener('click', (elem) => {
+  btn.forEach((e) => {
+    e.classList.remove('btn-active')
+  })
+  elem.target.classList.add('btn-active');
+  if (elem.target.classList.contains('btn-letters')) {
+    changeLetter();
+  } else changeNote();
+})
+
+// FULLSCREEN 
+
+const bntFullScreen = document.querySelector('.openfullscreen');
+
+const openFullScreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.fullscreenEnabled) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+bntFullScreen.addEventListener('click', openFullScreen)
