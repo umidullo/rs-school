@@ -18,10 +18,24 @@ const keysObj = {
 
 window.addEventListener('keydown', (event) => {
   if (!event.repeat) {
-    if (keysObj[event.code] == undefined) return;
+    if (keysObj[event.code] === undefined) return;
+    pianoKeys.forEach((elem) => {
+      if (keysObj[event.code] === elem.getAttribute('data-note')) {
+        elem.classList.add('piano-key-active');
+      }
+    })
+
     playAudio(`assets/audio/` + `${keysObj[event.code]}` + `.mp3`);
   }
 });
+
+window.addEventListener('keyup', (event) => {
+  pianoKeys.forEach((elem) => {
+    if (keysObj[event.code] === elem.getAttribute('data-note')) {
+      elem.classList.remove('piano-key-active');
+    }
+  })
+})
 
 const playAudio = (src) => {
   const audio = new Audio();
