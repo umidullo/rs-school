@@ -15,7 +15,6 @@ const labels = document.querySelectorAll('.filters label');
 
 labels.forEach(elem => {
   elem.oninput = function (event) {
-    console.log(this);
     this.querySelector('output').innerHTML = event.target.value;
     const suffix = this.querySelector('input').dataset.sizing;
     document.documentElement.style.setProperty(`--${this.querySelector('input').name}`, this.querySelector('input').value + suffix);
@@ -66,13 +65,13 @@ else if (time >= 18 && time <= 23) per = 2;
 function viewImage(src) {
   img.src = src;
   img.onload = () => { };
-  console.log(img);
 }
 
 function getImage() {
   const index = i % images.length;
   const imageSrc = base + periud[per] + images[index];
   viewImage(imageSrc);
+  drawImage(imageSrc);
   i++;
   nextBtn.disabled = true;
   setTimeout(function () { nextBtn.disabled = false }, 1000);
@@ -95,3 +94,17 @@ fileInput.addEventListener('change', function (e) {
 
 
 /* SAVE PICTURE */
+const canvas = document.querySelector('canvas');
+const saveBtn = document.querySelector('.btn-save')
+const ctx = canvas.getContext('2d');
+
+function drawImage(canvasSrc) {
+
+  img.setAttribute('crossOrigin', 'anonymous');
+  img.onload = function () {
+    canvas.width = img.width * 2;
+    canvas.height = img.height * 2;
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  };
+}
+drawImage()

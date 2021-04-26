@@ -178,6 +178,14 @@ img {
     sepia(var(--sepia, 0%)) saturate(var(--saturate, 100%))
     hue-rotate(var(--hue, 0deg));
 }
+
+canvas {
+  display: none;
+  /* height: 100%;
+  width: 100%;
+  max-height: 520px;
+  max-width: 830px; */
+}
 .fullscreen {
   position: fixed;
   top: 120px;
