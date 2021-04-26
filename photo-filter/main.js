@@ -92,7 +92,6 @@ fileInput.addEventListener('change', function (e) {
   reader.readAsDataURL(file);
 });
 
-
 /* SAVE PICTURE */
 const canvas = document.querySelector('canvas');
 const saveBtn = document.querySelector('.btn-save')
