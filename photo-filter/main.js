@@ -1,4 +1,5 @@
 // FULLSCREEN 
+
 const bntFullScreen = document.querySelector('.openfullscreen');
 
 const openFullScreen = () => {
@@ -11,6 +12,7 @@ const openFullScreen = () => {
 bntFullScreen.addEventListener('click', openFullScreen)
 
 /* FILTERS */
+
 const labels = document.querySelectorAll('.filters label');
 
 labels.forEach(elem => {
@@ -22,6 +24,7 @@ labels.forEach(elem => {
 })
 
 /* RESET */
+
 const resetBtn = document.querySelector('.btn-reset');
 
 resetBtn.addEventListener('click', () => {
@@ -41,7 +44,6 @@ resetBtn.addEventListener('click', () => {
     }
   })
 });
-
 
 /* NEXT PICTURE */
 
@@ -76,10 +78,10 @@ function getImage() {
   nextBtn.disabled = true;
   setTimeout(function () { nextBtn.disabled = false }, 1000);
 }
-
 nextBtn.addEventListener('click', getImage);
 
 /* ADD IMAGE */
+
 const imageContainer = document.querySelector('.editor');
 const fileInput = document.querySelector('input[type="file"]');
 fileInput.addEventListener('change', function (e) {
@@ -93,6 +95,7 @@ fileInput.addEventListener('change', function (e) {
 });
 
 /* SAVE PICTURE */
+
 const canvas = document.querySelector('canvas');
 const saveBtn = document.querySelector('.btn-save')
 const ctx = canvas.getContext('2d');
