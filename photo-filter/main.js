@@ -110,3 +110,12 @@ function drawImage(canvasSrc) {
   };
 }
 drawImage()
+
+saveBtn.addEventListener('click', function (e) {
+  console.log(canvas.toDataURL());
+  var link = document.createElement('a');
+  link.download = 'download.png';
+  link.href = canvas.toDataURL();
+  link.click();
+  link.delete;
+});
